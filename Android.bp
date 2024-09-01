@@ -27,6 +27,44 @@ android_app_import {
 	},
 }
 
+cc_prebuilt_library_shared {
+	name: "libenginepostproc.moto",
+	owner: "motorola",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/libenginepostproc.moto.so"],
+			shared_libs: [
+				"liblog",
+				"libnativewindow",
+				"libcamera_metadata",
+				"libcamera_client",
+				"libc++",
+				"libc",
+				"libm",
+				"libdl",
+			],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "com.motorola.android.dropboxhelper",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/com.motorola.android.dropboxhelper.jar"],
+}
+
+dex_import {
+	name: "com.motorola.frameworks.core.addon",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/com.motorola.frameworks.core.addon.jar"],
+}
+
 dex_import {
 	name: "com.motorola.motosignature",
 	owner: "motorola",
