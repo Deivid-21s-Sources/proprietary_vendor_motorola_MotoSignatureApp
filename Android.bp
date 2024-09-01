@@ -1,51 +1,53 @@
 android_app_import {
-    name: "MotoSignatureApp",
-    owner: "motorola",
-    apk: "proprietary/system/app/MotoSignatureApp/MotoSignatureApp.apk",
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    required: [
-        "MotoSignature2App",
-        "com.motorola.motosignature",
-        "moto-checkin",
-        "moto-core_services",
-        "moto-settings",
-    ],
+	name: "MotoSignatureApp",
+	owner: "motorola",
+	apk: "proprietary/system/app/MotoSignatureApp/MotoSignatureApp.apk",
+	preprocessed: true,
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	required: [
+		"MotoSignature2App",
+		"com.motorola.motosignature",
+		"moto-checkin",
+		"moto-core_services",
+		"moto-settings",
+	],
 }
 
 android_app_import {
-    name: "MotoSignature2App",
-    owner: "motorola",
-    apk: "proprietary/system/app/MotoSignature2App/MotoSignature2App.apk",
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
+	name: "MotoSignature2App",
+	owner: "motorola",
+	apk: "proprietary/system/app/MotoSignature2App/MotoSignature2App.apk",
+	preprocessed: true,
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
 }
 
 dex_import {
-    name: "moto-checkin",
-    owner: "motorola",
-    jars: ["proprietary/system/framework/moto-checkin.jar"],
+	name: "com.motorola.motosignature",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/com.motorola.motosignature.jar"],
 }
 
 dex_import {
-    name: "moto-core_services",
-    owner: "motorola",
-    jars: ["proprietary/system/framework/moto-core_services.jar"],
+	name: "moto-checkin",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/moto-checkin.jar"],
 }
 
 dex_import {
-    name: "moto-settings",
-    owner: "motorola",
-    jars: ["proprietary/system/framework/moto-settings.jar"],
+	name: "moto-core_services",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/moto-core_services.jar"],
 }
 
 dex_import {
-    name: "com.motorola.motosignature",
-    owner: "motorola",
-    jars: ["proprietary/system/framework/com.motorola.motosignature.jar"],
+	name: "moto-settings",
+	owner: "motorola",
+	jars: ["proprietary/system/framework/moto-settings.jar"],
 }
 
