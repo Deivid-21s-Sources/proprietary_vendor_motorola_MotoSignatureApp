@@ -48,7 +48,8 @@ PRODUCT_PACKAGES += \
     com.motorola.frameworks.core.addon \
     moto-checkin \
     moto-core_services \
-    moto-settings
+    moto-settings \
+    MotorolaSettingsProvider
 
 # Motorola Dropbox Helper
 PRODUCT_COPY_FILES += \

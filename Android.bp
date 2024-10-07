@@ -26,6 +26,21 @@ android_app_import {
 	],
 }
 
+android_app_import {
+	name: "MotorolaSettingsProvider",
+	owner: "motorola",
+	apk: "proprietary/system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	required: [
+		"moto-settings",
+	],
+	system_ext_specific: true,
+}
+
 cc_prebuilt_library_shared {
 	name: "libenginepostproc.moto",
 	owner: "motorola",
