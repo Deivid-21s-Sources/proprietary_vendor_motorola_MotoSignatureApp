@@ -8,11 +8,7 @@ android_app_import {
 		enabled: false,
 	},
 	required: [
-		"MotoSignature2App",
 		"com.motorola.motosignature",
-		"moto-checkin",
-		"moto-core_services",
-		"moto-settings",
 	],
 }
 
@@ -25,6 +21,9 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+	required: [
+		"com.motorola.motosignature",
+	],
 }
 
 cc_prebuilt_library_shared {
